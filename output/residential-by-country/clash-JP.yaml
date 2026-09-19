@@ -5,17 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 (家宽) - xiaohe
-  server: 108.160.136.71
+  server: 45.76.206.46
   port: 443
   udp: true
   type: vless
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
   servername: cdn8848.776676.xyz
-  skip-cert-verify: true
+  skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /tags/go/groups?ed=2560
     headers:
       Host: cdn8848.776676.xyz
 proxy-groups:

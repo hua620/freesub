@@ -5,17 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  server: 94.228.171.159
-  port: 8443
+  server: 167.82.76.7
+  port: 443
   udp: true
-  type: vless
-  uuid: 5b754a1a-11aa-4df9-a8ba-44af9a579fe1
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: hcjZwWlIplwEKT-Ea-vTM2n4jwiTCeL9wTUZG0WgCj0
-  servername: de.b2ai.top
-  client-fingerprint: chrome
+  type: trojan
+  password: MITIVpN
+  sni: ssl.fastly.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   server: 91.240.86.70
   port: 22443

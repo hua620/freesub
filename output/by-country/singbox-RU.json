@@ -4,23 +4,28 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇷🇺 俄罗斯 (Russia) 01 - xiaohe",
-      "server": "94.228.171.159",
-      "server_port": 8443,
-      "uuid": "5b754a1a-11aa-4df9-a8ba-44af9a579fe1",
-      "flow": "xtls-rprx-vision",
+      "server": "167.82.76.7",
+      "server_port": 443,
+      "password": "MITIVpN",
       "tls": {
         "enabled": true,
-        "server_name": "de.b2ai.top",
+        "server_name": "ssl.fastly.com",
+        "insecure": true,
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "hcjZwWlIplwEKT-Ea-vTM2n4jwiTCeL9wTUZG0WgCj0",
-          "short_id": ""
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
+        "headers": {
+          "Host": "mitivpn---ss--s---mitivpn-33e.global.ssl.fastly.net"
         }
       }
     },

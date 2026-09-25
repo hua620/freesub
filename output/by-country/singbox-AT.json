@@ -32,7 +32,26 @@
       "tls": {
         "enabled": true,
         "server_name": "filesconvert.org",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇦🇹 奥地利 (Austria) 04 - xiaohe",
+      "server": "212.183.88.136",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.calmlunch.com",
         "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/assignment",
+        "headers": {
+          "Host": "www.calmlunch.com"
+        }
       }
     },
     {
@@ -42,7 +61,8 @@
         "auto",
         "🇦🇹 奥地利 (Austria) 01 - xiaohe",
         "🇦🇹 奥地利 (Austria) 02 - xiaohe",
-        "🇦🇹 奥地利 (Austria) 03 - xiaohe"
+        "🇦🇹 奥地利 (Austria) 03 - xiaohe",
+        "🇦🇹 奥地利 (Austria) 04 - xiaohe"
       ]
     },
     {
@@ -51,7 +71,8 @@
       "outbounds": [
         "🇦🇹 奥地利 (Austria) 01 - xiaohe",
         "🇦🇹 奥地利 (Austria) 02 - xiaohe",
-        "🇦🇹 奥地利 (Austria) 03 - xiaohe"
+        "🇦🇹 奥地利 (Austria) 03 - xiaohe",
+        "🇦🇹 奥地利 (Austria) 04 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

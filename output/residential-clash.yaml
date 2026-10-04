@@ -4,29 +4,60 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  server: argo6.5671234.xyz
+- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  server: f3ca53e4-tmm5c0-txkkcl-1fli7.nw4.hyhuawei.com
   port: 443
   udp: true
+  type: hysteria2
+  password: 0abd5d38-fdf1-11ed-bade-f23c91369f2d
+  sni: f3ca53e4-tmm5c0-txkkcl-1fli7.nw4.hyhuawei.com
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
+  server: ab6440be-tmm5c0-truoje-1uni.hk3.hyhuawei.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: adbd0a82-3336-11ed-bd7c-f23c913c8d2b
+  sni: ab6440be-tmm5c0-truoje-1uni.hk3.hyhuawei.com
+  skip-cert-verify: true
+- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
+  server: tutaim.azad0namah.ir
+  port: 8080
+  udp: true
   type: vless
-  uuid: 08aaab35-a42d-4755-a03e-20c18cb1b3e8
+  uuid: fdc1206a-9d2e-42b7-b615-9ccea8cf70ee
+- name: 🇯🇵 日本 (Japan) 04 (家宽) - xiaohe
+  server: 175.41.179.37
+  port: 51262
+  udp: true
+  type: vless
+  uuid: 903fed13-8e78-4fa2-a83e-b392b289741f
   tls: true
-  servername: argo6.5671234.xyz
+  servername: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /e8e2cecb6188f7fb
+    path: /@Marisa_kristi
+    headers:
+      Host: 3tmj2egtm-fno.49bnithzk8vphybv36d1z1xkzfvogt2m6.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
+  - 🇯🇵 日本 (Japan) 04 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
+  - 🇯🇵 日本 (Japan) 04 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES

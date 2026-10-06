@@ -4,7 +4,18 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
+- name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  server: 162.159.0.169
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇦🇹 奥地利 (Austria) 02 (家宽) - xiaohe
   server: 31.77.227.6
   port: 52006
   udp: true
@@ -14,23 +25,8 @@ proxies:
   tls: true
   servername: bigdick.gamegrow.ru
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 02 (家宽) - xiaohe
-  server: 83.147.216.223
-  port: 4433
-  udp: true
-  type: vless
-  uuid: 660174a2-d32d-4521-840d-d1853bfc80b8
-  tls: true
-  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
 - name: 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
-  server: 104.20.36.205
+  server: argo6.5671234.xyz
   port: 443
   udp: true
   type: vless
@@ -43,29 +39,21 @@ proxies:
     path: /e8e2cecb6188f7fb
     headers:
       Host: argo6.5671234.xyz
-- name: 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe
-  server: test.keoplentuio.xyz
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
-  - 🇯🇵 日本 (Japan) 02 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 (家宽) - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
-  - 🇯🇵 日本 (Japan) 02 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 (家宽) - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 03 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe
 rules:
 - MATCH,PROXIES

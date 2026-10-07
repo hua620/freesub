@@ -4,27 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
-  server: 31.77.227.6
-  port: 52006
+- name: 🇰🇬 KG 01 - xiaohe
+  server: 104.18.42.54
+  port: 2083
   udp: true
   type: vless
-  uuid: bc659d88-a1e0-076c-a49a-7b51b26a7a7f
-  flow: xtls-rprx-vision
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
-  servername: bigdick.gamegrow.ru
+  servername: newwk1.f1w.de5.net
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: newwk1.f1w.de5.net
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
+  - 🇰🇬 KG 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
+  - 🇰🇬 KG 01 - xiaohe
 rules:
 - MATCH,PROXIES
